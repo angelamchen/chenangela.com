@@ -1,36 +1,150 @@
 import adpLogo from '../Images/ADP.jpg'
 import rbcLogo from '../Images/RBC.jpg'
+import { faJava, faJsSquare, faHtml5, faCss3Alt, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons'
+import { faLeaf, faDatabase, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import C from '../Images/Logos/C.png'
+import css from '../Images/Logos/css.png'
+import html from '../Images/Logos/html.png'
+import java from '../Images/Logos/java.png'
+import javascript from '../Images/Logos/javascript.png'
+import python from '../Images/Logos/python.png'
+import sql from '../Images/Logos/sql.png'
+import bootstrap from '../Images/Logos/bootstrap.png'
+import react from '../Images/Logos/react.png'
+import node from '../Images/Logos/node.png'
+import springboot from '../Images/Logos/springboot.png'
+import flask from '../Images/Logos/flask.png'
+import electron from '../Images/Logos/electron.png'
+
 
 export const JOB_EXPERIENCE = [
     {
         companyName: 'ADP, LLC',
         logo: adpLogo,
-        location: 'Mississauga, Canada',
+        color: '#ff6961',
         position: 'Software Developer Intern',
         descriptions: [
             {
-                projectDescription: 'something',
-                tools: 'something'
+                projectDescription: 'something about springboot',
+                tools: [
+                    {
+                        name: 'Java',
+                        icon: faJava
+                    },
+                    {
+                        name: 'Spring Boot',
+                        icon: faLeaf
+                    },
+                    {
+                        name: 'SQL',
+                        icon: faDatabase
+                    },
+                    {
+                        name: 'TDD',
+                        icon: faLaptopCode
+                    },
+
+                ]
             },
             {
-                projectDescription: 'something',
-                tools: 'something'
+                projectDescription: 'something about react and dashboards',
+                tools: [
+                    {
+                        name: 'React.js',
+                        icon: faReact
+                    },
+                    {
+                        name: 'Node.js',
+                        icon: faNodeJs
+                    },
+                    {
+                        name: 'JavaScript',
+                        icon: faJsSquare
+                    },
+                    {
+                        name: 'HTML',
+                        icon: faHtml5
+                    },
+                    {
+                        name: 'CSS',
+                        icon: faCss3Alt
+                    },
+                ]
             },
         ]
     },
     {
         companyName: 'Royal Bank of Canada',
         logo: rbcLogo,
-        location: 'Toronto, Canada',
+        color: '#aec6cf',
         position: 'Innovation Analyst',
         descriptions: [
             {
-                projectDescription: 'something',
-                tools: 'something'
+                projectDescription: 'something something agile',
+                tools: [
+                    {
+                        name: 'Agile',
+                        icon: faReact
+                    },
+                    {
+                        name: 'Product Design',
+                        icon: faReact
+                    },
+                    {
+                        name: 'Presentation',
+                        icon: faReact
+                    },
+                ]
             },
             {
+                projectDescription: 'something something websites',
+                tools: [
+                    {
+                        name: 'HTML',
+                        icon: faReact
+                    },
+                    {
+                        name: 'CSS',
+                        icon: faReact
+                    },
+                    {
+                        name: 'Bootstrap',
+                        icon: faReact
+                    },
+                    {
+                        name: 'UI/UX',
+                        icon: faReact
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        companyName: 'SHAD Canada',
+        logo: rbcLogo,
+        color: '#7fb5b5',
+        position: 'University of British Columbia',
+        descriptions: [
+            {
+                projectDescription: 'something something STEM',
+                tools: [
+                    {
+                        name: 'UI/UX',
+                        icon: faReact
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        companyName: 'DECA',
+        logo: rbcLogo,
+        color: '#779ecb',
+        position: 'Competitor, International Conferience Qualifier',
+        descriptions: [
+            {
                 projectDescription: 'something',
-                tools: 'something'
+                tools: []
             },
         ]
     }
@@ -40,31 +154,31 @@ export const JOB_EXPERIENCE = [
 export const SKILLS_LANGUAGES = [
     {
         name: 'Java',
-        icon: 'java'
+        icon: java
     },
     {
         name: 'JavaScript',
-        icon: 'js-square'
+        icon: javascript
     },
     {
         name: 'C',
-        icon: 'cuttlefish'
+        icon: C
     },
     {
         name: 'SQL',
-        icon: 'database'
+        icon: sql
     },
     {
         name: 'Python',
-        icon: 'python'
+        icon: python
     },
     {
         name: 'HTML',
-        icon: 'html5'
+        icon: html
     },
     {
         name: 'CSS',
-        icon: 'css3-alt'
+        icon: css
     },
 
 ]
@@ -72,26 +186,26 @@ export const SKILLS_LANGUAGES = [
 export const SKILLS_TECHNOLOGIES = [
     {
         name: 'React.js',
-        icon: 'react'
+        icon: react
     },
     {
         name: 'Node.js',
-        icon: 'node-js'
+        icon: node
     },
     {
         name: 'Spring Boot',
-        icon: 'leaf'
+        icon: springboot
     },
     {
         name: 'Bootstrap',
-        icon: 'boostrap'
+        icon: bootstrap
     },
     {
         name: 'Electron',
-        icon: 'atom'
+        icon: electron
     },
     {
         name: 'Flask',
-        icon: 'pepper-hot'
+        icon: flask
     },
 ]
