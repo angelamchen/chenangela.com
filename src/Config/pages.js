@@ -2,7 +2,6 @@ import About from '../Pages/about'
 import Experience from '../Pages/experience'
 import Projects from '../Pages/projects'
 import Creative from '../Pages/creative'
-import Contact from '../Pages/contact'
 
 export const PAGES = [
     {
@@ -20,14 +19,9 @@ export const PAGES = [
         page: Projects,
         path: '/projects'
     },
-    {
+/*     {
         name: 'Creative',
         page: Creative,
         path: '/creative'
-    },
-    {
-        name: 'Contact',
-        page: Contact,
-        path: '/contact'
-    },
+    }, */
 ]

@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Media = styled.div`
     overflow: hidden;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
 `
 
 const Logo = styled.img`
 margin-left: 50%;
 transform: translateX(-50%);
+height: 150px;
+width: relative;
 `
 
 const Tools = styled.div`
@@ -36,7 +38,7 @@ font-size: 12px;
 
 const Cards = styled(Card)`
 box-shadow: 5px 10px 20px #d4d4d4;
-border-radius: 10px;
+border-radius: 15px;
 border: none;
 
 &:hover {
@@ -46,16 +48,17 @@ border: none;
 
 export default class InfoCard extends React.Component {
     render() {
-        const jobExperience = this.props.jobExperience
+        const experience = this.props.experience
 
         return (
             <Cards>
                 <Media>
-                    <Logo src={jobExperience.logo} alt="..." />
+                    <Logo src={experience.image} alt="..." />
                 </Media>
                 <Card.Body className='text-dark'>
-                    <h4 className="card-title">{jobExperience.companyName}</h4>
-                    {jobExperience.descriptions.map((desc) => {
+                    <h4 className="card-title">{experience.name}</h4>
+                    <h6>{experience.secondaryDescription}</h6>
+                    {experience.descriptions.map((desc) => {
                         return (
                             <div>
                                 <p className="card-text text-secondary">{desc.projectDescription}</p>
@@ -63,12 +66,10 @@ export default class InfoCard extends React.Component {
                                     {(desc.tools).map((tool) => {
                                         return (
 
-                                            <Tools color={jobExperience.color}>
+                                            <Tools color={experience.color}>
                                                 <Icons icon={tool.icon} size="sm"/>
                                                 <ToolsText>{tool.name}</ToolsText>
                                             </Tools>
-
-
                                         )
                                     })}
                                 </Row>

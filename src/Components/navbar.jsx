@@ -3,18 +3,29 @@ import { NavLink } from "react-router-dom";
 import { PAGES } from '../Config/pages'
 import styled from 'styled-components';
 import { Row, Col, Container } from 'react-bootstrap';
+import blueHeader from '../Images/blueHeader.svg'
 
 const Wrapper = styled.ul`
   list-style-type: none;
-  margin: 0;
+  margin-top: 22px;
   padding: 0;
   overflow: hidden;
   background-color: white;
   position: fixed;
   width: 100%;
-  box-shadow: 0px 5px 5px #d4d4d4;
   z-index:1
 `;
+
+const Pattern = styled.div`
+overflow: hidden;
+position: fixed;
+z-index:1;
+height: 22px;
+`
+
+const Nav = styled(Row)`
+    text-align: left;
+`
 
 const NavItems = styled.li`
     display: inline-block;
@@ -43,13 +54,14 @@ class Navbar extends React.Component {
 
     render() {
         return (
+            <div>
             <Wrapper>
                 <Container>
                     <Row>
-                        <Col className='justify-content-md-left' lg={4}>
+                        <Col lg={4}>
                             <NavItems><NavLogo>{'<AC>'}</NavLogo></NavItems>
                         </Col>
-                        <Col className='justify-content-md-right'>
+                        <Nav>
                             <Col>
                                 <NavItems>
                                     <NavLinks exact to='/' activeStyle={activeNavLink}>Home</NavLinks>
@@ -66,10 +78,14 @@ class Navbar extends React.Component {
                                     </Col>
                                 )
                             })}
-                        </Col>
+                        </Nav>
                     </Row>
                 </Container>
             </Wrapper>
+            <Pattern>
+            <img src={blueHeader} alt='pattern'/>
+            </Pattern>
+            </div>
         );
     }
 }

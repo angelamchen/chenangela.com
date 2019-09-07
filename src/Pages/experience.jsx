@@ -3,17 +3,8 @@ import { JOB_EXPERIENCE, SKILLS_LANGUAGES, SKILLS_TECHNOLOGIES } from '../Config
 import { Col, Container, Row, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import styled from 'styled-components';
 import InfoCard from '../Components/infoCard'
-
-const Wrapper = styled(Container)`
-  padding-top: 10%;
-  padding-bottom: 10%;
-`
-
-const Title = styled.h1`
-color: #57BBBF;
-font-size: 3.5em;
-display: flex;
-`
+import MastHead from '../Components/mastHead'
+import Footer from '../Components/footer'
 
 const ExperienceCards = styled(Col)`
     display: flex;
@@ -22,7 +13,6 @@ const ExperienceCards = styled(Col)`
 const Icon = styled.img`
 width: 100px;
 height: relative;
-filter: grayscale(100%);
 
 &:hover {
     filter: none;
@@ -40,23 +30,47 @@ padding-right: 50px;
 const SkillsSection = styled(Row)`
 padding: 30px;`
 
+const DarkerSection = styled.div`
+background-color: #f3f7f9;
+padding-bottom: 5%;
+`
+
 class Experience extends React.Component {
     render() {
         return (
-            <Wrapper>
-                <Title>Experience</Title>
-
+            <div>
+                <MastHead
+                    section={'EXPERIENCE / SKILLS'}
+                    darkTitle={'something something I have skills'}
+                    blueTitle={'something about explore'}
+                    description={'Below you can explore and dive in through some of my past experiences and tools I know!!'}
+                />
                 <br />
-                <Col lg={12}>
+                <br />
+                <Container>
                     <Row>
-                        <Col lg={2}>
-                            <SkillTitle>Languages</SkillTitle>
-                        </Col>
-                        <Col lg={10}>
-                            <SkillsSection className='justify-content-md-center'>
-                                {SKILLS_LANGUAGES.map((lang) => {
-                                    return (
-                                        <Skill>
+                        {JOB_EXPERIENCE.map((job) => {
+                            return (
+                                <ExperienceCards lg={4}>
+                                    <InfoCard
+                                        experience={job}
+                                    />
+                                </ExperienceCards>
+                            )
+                        })}
+                    </Row>
+                    <br />
+                    <br />
+                </Container>
+                
+                    <DarkerSection>
+                        <Row className='justify-content-md-center'>
+                            <SkillTitle >Languages</SkillTitle>
+                        </Row>
+                        <SkillsSection className='justify-content-md-center'>
+                            {SKILLS_LANGUAGES.map((lang) => {
+                                return (
+                                    <Skill>
                                         <OverlayTrigger
                                             placement='top'
                                             overlay={
@@ -67,21 +81,18 @@ class Experience extends React.Component {
                                         >
                                             <Icon src={lang.icon} />
                                         </OverlayTrigger>
-                                        </Skill>
-                                    )
-                                })}
-                            </SkillsSection>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={2}>
-                            <SkillTitle>Technologies</SkillTitle>
-                        </Col>
-                        <Col lg={10}>
-                            <SkillsSection className='justify-content-md-center'>
-                                {SKILLS_TECHNOLOGIES.map((tech) => {
-                                    return (
-                                        <Skill>
+                                    </Skill>
+                                )
+                            })}
+                        </SkillsSection>
+                        <Row className='justify-content-md-center'>
+                            <SkillTitle >Technologies</SkillTitle>
+                        </Row>
+                        <SkillsSection className='justify-content-md-center'>
+
+                            {SKILLS_TECHNOLOGIES.map((tech) => {
+                                return (
+                                    <Skill>
                                         <OverlayTrigger
                                             placement='top'
                                             overlay={
@@ -91,27 +102,13 @@ class Experience extends React.Component {
                                             }>
                                             <Icon src={tech.icon} />
                                         </OverlayTrigger>
-                                        </Skill>
-                                    )
-                                })}
-                            </SkillsSection>
-                        </Col>
-                    </Row>
-                </Col>
-                <br />
-                <br />
-                <Row>
-                    {JOB_EXPERIENCE.map((job) => {
-                        return (
-                            <ExperienceCards lg={4}>
-                                <InfoCard
-                                    jobExperience={job}
-                                />
-                            </ExperienceCards>
-                        )
-                    })}
-                </Row>
-            </Wrapper>
+                                    </Skill>
+                                )
+                            })}
+                        </SkillsSection>
+                    </DarkerSection>
+                <Footer />
+            </div>
         );
     }
 }

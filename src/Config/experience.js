@@ -19,10 +19,10 @@ import electron from '../Images/Logos/electron.png'
 
 export const JOB_EXPERIENCE = [
     {
-        companyName: 'ADP, LLC',
-        logo: adpLogo,
+        name: 'ADP, LLC',
+        image: adpLogo,
         color: '#ff6961',
-        position: 'Software Developer Intern',
+        secondaryDescription: 'Software Developer Intern',
         descriptions: [
             {
                 projectDescription: 'something about springboot',
@@ -74,10 +74,10 @@ export const JOB_EXPERIENCE = [
         ]
     },
     {
-        companyName: 'Royal Bank of Canada',
-        logo: rbcLogo,
+        name: 'Royal Bank of Canada',
+        image: rbcLogo,
         color: '#aec6cf',
-        position: 'Innovation Analyst',
+        secondaryDescription: 'Innovation Analyst',
         descriptions: [
             {
                 projectDescription: 'something something agile',
@@ -120,10 +120,10 @@ export const JOB_EXPERIENCE = [
         ]
     },
     {
-        companyName: 'SHAD Canada',
-        logo: rbcLogo,
+        name: 'SHAD Canada',
+        image: rbcLogo,
         color: '#7fb5b5',
-        position: 'University of British Columbia',
+        secondaryDescription: 'University of British Columbia',
         descriptions: [
             {
                 projectDescription: 'something something STEM',
@@ -137,10 +137,10 @@ export const JOB_EXPERIENCE = [
         ]
     },
     {
-        companyName: 'DECA',
-        logo: rbcLogo,
+        name: 'DECA',
+        image: rbcLogo,
         color: '#779ecb',
-        position: 'Competitor, International Conferience Qualifier',
+        secondaryDescription: 'Competitor, International Conferience Qualifier',
         descriptions: [
             {
                 projectDescription: 'something',
