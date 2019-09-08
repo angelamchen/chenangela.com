@@ -1,9 +1,9 @@
-import adpLogo from '../Images/ADP.jpg'
 import travisImg from '../Images/Travis.jpg'
 import imagineCinemas from '../Images/ImagineCinemas.jpg'
 import recipiaImg from '../Images/Recipia.jpg'
+import smartmirrorImg from '../Images/MagicMirror.jpg'
 import { faJsSquare, faRaspberryPi, faReact, faPython, faAws } from '@fortawesome/free-brands-svg-icons'
-import { faPencilAlt, faMicrochip, faHammer } from '@fortawesome/free-solid-svg-icons'
+import { faPencilAlt, faMicrochip, faHammer, faSearchDollar, faUserTie, faPalette } from '@fortawesome/free-solid-svg-icons'
 
 export const PROJECTS = [
     {
@@ -38,12 +38,12 @@ export const PROJECTS = [
     },
     {
         name: 'Smart Mirror',
-        image: adpLogo,
-        color: '#ff6961',
+        image: smartmirrorImg,
+        color: '#5c9dd6',
         secondaryDescription: 'Personal Project',
         descriptions: [
             {
-                projectDescription: 'A independently built smart mirror from scratch that displays magic mirror modules, including time, calendar, weather and Spotify Now Playing music',
+                projectDescription: 'A independently built smart mirror from scratch that displays magic mirror modules, including time, calendar, weather and Spotify Now Playing music, personalized for my own liking!',
                 tools: [
                     {
                         name: 'UI / UX',
@@ -77,7 +77,7 @@ export const PROJECTS = [
         secondaryDescription: 'DECA Sports and Entertainement Promotional Plan',
         descriptions: [
             {
-                projectDescription: 'Something about helping Imagine Cinemas, creating apps yadda yadda',
+                projectDescription: 'Created the DREAM initiative (Design, Responsibility, Engagement, Accessibility, Modernization) promotional plan for Imagine Cinemas, based on research collected from analyze current perceptions to improve the company\'s reputation. Wrote a 30 page business report, designed a corresponding presentation and prototyped a mobile application supplement. Report won Provicial Champion and qualified the international conference (ICDC)',
                 tools: [
                     {
                         name: 'UI / UX',
@@ -85,19 +85,15 @@ export const PROJECTS = [
                     },
                     {
                         name: 'Marketing',
-                        icon: faMicrochip
+                        icon: faSearchDollar
                     },
                     {
                         name: 'Business',
-                        icon: faJsSquare
-                    },
-                    {
-                        name: 'Design',
-                        icon: faHammer
+                        icon: faUserTie
                     },
                     {
                         name: 'Prototyping',
-                        icon: faRaspberryPi
+                        icon: faPalette
                     },
 
                 ]
@@ -112,7 +108,11 @@ export const PROJECTS = [
         secondaryDescription: 'SHAD UBC House Project',
         descriptions: [
             {
-                projectDescription: 'Something about application to limit food waste',
+                projectDescription: 'Recipia is a mobile food tracking application that strives to mitigate food wastage. Application connects users to food delivery services and uses their API\'s to track when the food would expire based on delivery dates and machine learning models to recommend recipes on soon to be expired food.',
+                tools: []
+            },
+            {
+                projectDescription: 'Created a protoype for the application as well as a business report highlighting its\' features, impact, and analyzing the market for the product. Report won best business report on campus after concept was pitched to a panel of judges',
                 tools: [
                     {
                         name: 'UI / UX',
@@ -134,7 +134,6 @@ export const PROJECTS = [
                         name: 'Raspberry Pi',
                         icon: faRaspberryPi
                     },
-
                 ]
             },
 

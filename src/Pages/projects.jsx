@@ -17,8 +17,8 @@ class Projects extends React.Component {
             <div>
             <MastHead
                 section={'PROJECTS'}
-                darkTitle={'here are some of my'}
-                blueTitle={'techy fun stuff'}
+                darkTitle={'i also enjoy working on'}
+                blueTitle={'cool projects'}
                 description={'Like most comp sci students, I like making fun techy stuff in my free time 😎. Whether it was because I wanted to learn something new, was participating in a competition, or wanted a solution to a problem so that I could be lazy, here are a list of some of my current and past projects!'}
             />
             <br />

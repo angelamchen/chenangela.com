@@ -46,6 +46,10 @@ border: none;
 }
 `
 
+const CardDescription = styled.p`
+padding-top: 10px;
+`
+
 export default class InfoCard extends React.Component {
     render() {
         const experience = this.props.experience
@@ -61,11 +65,10 @@ export default class InfoCard extends React.Component {
                     {experience.descriptions.map((desc) => {
                         return (
                             <div>
-                                <p className="card-text text-secondary">{desc.projectDescription}</p>
+                                <CardDescription className="card-text text-secondary">{desc.projectDescription}</CardDescription>
                                 <Row>
                                     {(desc.tools).map((tool) => {
                                         return (
-
                                             <Tools color={experience.color}>
                                                 <Icons icon={tool.icon} size="sm"/>
                                                 <ToolsText>{tool.name}</ToolsText>

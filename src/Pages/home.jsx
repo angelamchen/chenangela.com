@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container } from 'react-bootstrap';
+import { Col, Container, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
 import img from '../Images/cliff.jpg';
@@ -8,12 +8,19 @@ const IntroSection = styled(Col)`
     color: white;
     top: 35%;
     position: fixed;
-`;
+`
 
-const LearnMoreButton = styled.button`
+const LearnMoreButton = styled(Button)`
 border-radius: 20px;
 padding-right: 15px;
 padding-left: 15px;
+background-color: white;
+color: black;
+border: none;
+
+&:hover {
+    background-color: #5da1a3;
+}
 `
 
 const Name = styled.h1`
@@ -26,12 +33,12 @@ const Wrapper = styled(Container)`
 `
 
 const BackgroundImg = styled.div`
-  background-image: url(${img});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: -webkit-fill-available;
-`;
+  background-image: url(${img});
+`
 
 class Home extends React.Component {
     render() {

@@ -3,7 +3,7 @@ import { Col, Row, Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import Profile from '../Images/profile.jpg'
 import Footer from '../Components/footer'
-import { IMAGES, DESCRIPTION } from '../Config/about'
+import { IMAGES, DESCRIPTION, TECH_DESC } from '../Config/about'
 
 const Wrapper = styled(Container)`
     padding-top: 8%;
@@ -40,9 +40,16 @@ const Description = styled.p`
 
 const Image = styled.img`
     width: 250px;
-    height: relative;
+    height: 187.5px;
     padding: 10px;
 `
+
+const IntroParagraph = styled.p`
+    padding: 5px;
+`
+
+const Intro = styled(Col)`
+padding-top: 10px;`
 
 class About extends React.Component {
     render() {
@@ -52,34 +59,48 @@ class About extends React.Component {
                     <Wrapper>
                         <Description>ABOUT ME</Description>
                         <Title>ANGELA WHO?</Title>
-                        <Col>
-                            <h6>So many Angela's, what defines this one?</h6>
-                        </Col>
+                        <h6>So many Angela's, what defines this one?</h6>
                         <br />
                         <Row>
-                            <Col>
+                            <Col lg={6} sm={12}>
                                 <ProfilePicture src={Profile} />
                             </Col>
-                            <Col>
+                            <Intro lg={6} sm={12}>
                                 <h5>Angela</h5>
                                 <h6>[an-juh-luh]</h6>
-                                <br />
-                                <p>{DESCRIPTION}</p>
+                                {DESCRIPTION.map(desc => {
+                                    return (
+                                        <IntroParagraph>{desc}</IntroParagraph>
+                                    )
+                                })}
+                            </Intro>
+                        </Row>
+                        <Row>
+                            <Col sm={12}>
+                                {TECH_DESC.map(desc => {
+                                    return (
+                                        <IntroParagraph>{desc}</IntroParagraph>
+                                    )
+                                })}
                             </Col>
                         </Row>
                     </Wrapper>
                 </DarkerSection>
                 <LightSection>
-                    <Description>Hold Up! There is more to me than just school and programming!</Description>
+                    <Description>But wait! There is more to me than just programming!</Description>
+                    <p>I'm actually a huge sports girl, with a passion for food</p>
                     <ul>
                         <FunFacts>I ran the Scotiabank Toronto Waterfront half marathon with 2:04:15 time (almost died cause I didn't train but was proud nonetheless)</FunFacts>
                         <FunFacts>I'm part of the best team ever known as the Waterloo Warriors Badminton Varsity team (and we placed 2nd at OUAs!)</FunFacts>
-                        <FunFacts>I placed 2nd for Women's Doubles at the 2017 Junior Pan American Badminton Championships! 🥈</FunFacts>
-                        <FunFacts>I had a huge photopraphy phase and really like taking photos...</FunFacts>
-                        <FunFacts>... and I also like jumping around a lot when I travel! Check more photography <a href='https://vsco.co/4ngelachen/'>here!</a></FunFacts>
-                        <FunFacts>I'm quite the foodie as well! I enjoy going around to different cities to try all kinds of foods. View my food <a href=''>Instagram!</a></FunFacts>
-                        <FunFacts>Sports is definately my thing, badminton, volleyball, track and field, basketball, you name it!</FunFacts>
-                        <FunFacts>Of course, I'm a proud Raptors fan and witnessed "The Shot / Is this the dagger? / Game 7 Philly" live in section 500 (yes I bought tickets before the prices skyrocketed)</FunFacts>
+                        <FunFacts>I placed 2nd for Women's Doubles at the 2017 Junior Pan American Badminton Championships!</FunFacts>
+                        <FunFacts>I'm quite the foodie as well! I enjoy going around to different cities to try all kinds of foods. View my food <a href='https://https://www.instagram.com/fatassfoodie/'>Instagram!</a></FunFacts>
+                        <FunFacts>Sports is definitely my thing, badminton, volleyball, track and field, basketball, you name it!</FunFacts>
+                        <FunFacts>Of course, I'm a proud Raptors fan and witnessed Philly game 7 "The Shot / Is this the dagger?" live in section 500 (last affordable game before the prices skyrocketed)</FunFacts>
+                    </ul>
+                    <p>I had a huge photography phase and really like taking photos...</p>
+                    <ul>
+                        <FunFacts>I mainly focus on taking photos of sceneries and food ...</FunFacts>
+                        <FunFacts>... but I also like jumping around a lot in photos when I travel! Check more photography <a href='https://vsco.co/4ngelachen/'>here!</a></FunFacts>
                     </ul>
                     <Row className='justify-content-md-center'>
                         {IMAGES.map((image) => {

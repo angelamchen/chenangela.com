@@ -41,9 +41,9 @@ class Experience extends React.Component {
             <div>
                 <MastHead
                     section={'EXPERIENCE / SKILLS'}
-                    darkTitle={'something something I have skills'}
-                    blueTitle={'something about explore'}
-                    description={'I work at places :O. Below you can explore and dive in through some of my past experiences and tools I know!!'}
+                    darkTitle={'i\'ve worked at some cool places'}
+                    blueTitle={'i\'ve joined some amazing organizations'}
+                    description={'My experiences include a range of work experiences and extracurriculars. For jobs, I mainly have experience with software development, with focus on both backend development and frontend. Below you can explore and dive in through some of my past experiences and the skills I\'ve gained out of them!'}
                 />
                 <br />
                 <br />
