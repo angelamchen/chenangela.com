@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import InfoCard from '../Components/infoCard'
 import MastHead from '../Components/mastHead'
 import { PROJECTS } from '../Config/projects'
+import Footer from '../Components/footer'
 
 const ExperienceCards = styled(Col)`
     display: flex;
@@ -16,9 +17,9 @@ class Projects extends React.Component {
             <div>
             <MastHead
                 section={'PROJECTS'}
-                darkTitle={'something about interestes'}
-                blueTitle={'like making stuff'}
-                description={'something like description'}
+                darkTitle={'here are some of my'}
+                blueTitle={'techy fun stuff'}
+                description={'Like most comp sci students, I like making fun techy stuff in my free time 😎. Whether it was because I wanted to learn something new, was participating in a competition, or wanted a solution to a problem so that I could be lazy, here are a list of some of my current and past projects!'}
             />
             <br />
             <br />
@@ -26,9 +27,11 @@ class Projects extends React.Component {
                 <Row>
                     {PROJECTS.map((job) => {
                         return (
-                            <ExperienceCards lg={4}>
+                            <ExperienceCards lg={6}>
                                 <InfoCard
+                                    key={job.name}
                                     experience={job}
+                                    height='350px'
                                 />
                             </ExperienceCards>
                         )
@@ -37,6 +40,7 @@ class Projects extends React.Component {
                 <br />
                 <br />
             </Container>
+            <Footer />
             </div>
         )
     }

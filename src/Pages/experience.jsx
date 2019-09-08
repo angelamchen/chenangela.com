@@ -43,7 +43,7 @@ class Experience extends React.Component {
                     section={'EXPERIENCE / SKILLS'}
                     darkTitle={'something something I have skills'}
                     blueTitle={'something about explore'}
-                    description={'Below you can explore and dive in through some of my past experiences and tools I know!!'}
+                    description={'I work at places :O. Below you can explore and dive in through some of my past experiences and tools I know!!'}
                 />
                 <br />
                 <br />
@@ -54,6 +54,7 @@ class Experience extends React.Component {
                                 <ExperienceCards lg={4}>
                                     <InfoCard
                                         experience={job}
+                                        height='150px'
                                     />
                                 </ExperienceCards>
                             )

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Col, Container, Row, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Row, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { CONTACT_INFO } from '../Config/contactInfo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import img from '../Images/blueHeader.svg';
@@ -29,6 +29,7 @@ class Footer extends React.Component {
                     {CONTACT_INFO.map((contact) => {
                         return (
                             <OverlayTrigger
+                                key={contact.name}
                                 placement='top'
                                 overlay={
                                     <Tooltip id={`tooltip-top`}>

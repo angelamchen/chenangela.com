@@ -1,16 +1,19 @@
 import adpLogo from '../Images/ADP.jpg'
+import travisImg from '../Images/Travis.jpg'
+import imagineCinemas from '../Images/ImagineCinemas.jpg'
+import recipiaImg from '../Images/Recipia.jpg'
 import { faJsSquare, faRaspberryPi, faReact, faPython, faAws } from '@fortawesome/free-brands-svg-icons'
 import { faPencilAlt, faMicrochip, faHammer } from '@fortawesome/free-solid-svg-icons'
 
 export const PROJECTS = [
     {
         name: 'Travis - Insurance Chatbot',
-        image: adpLogo,
-        color: '#ff6961',
+        image: travisImg,
+        color: '#8b76bc',
         secondaryDescription: 'Hack the 6ix Project',
         descriptions: [
             {
-                projectDescription: 'Travis is a smart chatbot specialized to insure your personal items, wherever you go. The goal of Travis is that you don’t have to call anyone or worry about anything. Before leaving for a trip or going on a vacation, you can have a quick conversation with travis about the things you\'d like to insure and it\'ll give you an estimated price and a quote for your items.',
+                projectDescription: 'Travis is a smart chatbot specialized to insure your personal items, wherever you travel. Before leaving for a trip, you can have a quick conversation with Travis about specific items you\'d like to insure and it\'ll give you an estimated price your items.',
                 tools: [
                     {
                         name: 'React.js',
@@ -69,12 +72,47 @@ export const PROJECTS = [
     },
     {
         name: 'Imagine Cinema Promotion Plan',
-        image: adpLogo,
-        color: '#ff6961',
+        image: imagineCinemas,
+        color: '#bf7394',
         secondaryDescription: 'DECA Sports and Entertainement Promotional Plan',
         descriptions: [
             {
                 projectDescription: 'Something about helping Imagine Cinemas, creating apps yadda yadda',
+                tools: [
+                    {
+                        name: 'UI / UX',
+                        icon: faPencilAlt
+                    },
+                    {
+                        name: 'Marketing',
+                        icon: faMicrochip
+                    },
+                    {
+                        name: 'Business',
+                        icon: faJsSquare
+                    },
+                    {
+                        name: 'Design',
+                        icon: faHammer
+                    },
+                    {
+                        name: 'Prototyping',
+                        icon: faRaspberryPi
+                    },
+
+                ]
+            },
+
+        ]
+    },
+    {
+        name: 'Recipia',
+        image: recipiaImg,
+        color: '#85bf73',
+        secondaryDescription: 'SHAD UBC House Project',
+        descriptions: [
+            {
+                projectDescription: 'Something about application to limit food waste',
                 tools: [
                     {
                         name: 'UI / UX',

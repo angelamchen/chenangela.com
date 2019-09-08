@@ -14,6 +14,7 @@ class App extends React.Component {
         {PAGES.map((page) => {
           return (
             <Route
+              key={page.page}
               path={page.path}
               component={page.page}
             />

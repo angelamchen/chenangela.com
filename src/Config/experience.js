@@ -1,5 +1,8 @@
 import adpLogo from '../Images/ADP.jpg'
 import rbcLogo from '../Images/RBC.jpg'
+import decaLogo from '../Images/DECA.jpg'
+import shadLogo from '../Images/SHAD.jpg'
+import ynaLogo from '../Images/YNA.jpg'
 import { faJava, faJsSquare, faHtml5, faCss3Alt, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons'
 import { faLeaf, faDatabase, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import C from '../Images/Logos/C.png'
@@ -21,7 +24,7 @@ export const JOB_EXPERIENCE = [
     {
         name: 'ADP, LLC',
         image: adpLogo,
-        color: '#ff6961',
+        color: '#db5757',
         secondaryDescription: 'Software Developer Intern',
         descriptions: [
             {
@@ -76,8 +79,8 @@ export const JOB_EXPERIENCE = [
     {
         name: 'Royal Bank of Canada',
         image: rbcLogo,
-        color: '#aec6cf',
-        secondaryDescription: 'Innovation Analyst',
+        color: '#80abb3',
+        secondaryDescription: 'Innovation Developer',
         descriptions: [
             {
                 projectDescription: 'something something agile',
@@ -121,8 +124,8 @@ export const JOB_EXPERIENCE = [
     },
     {
         name: 'SHAD Canada',
-        image: rbcLogo,
-        color: '#7fb5b5',
+        image: shadLogo,
+        color: '#7ab87a',
         secondaryDescription: 'University of British Columbia',
         descriptions: [
             {
@@ -138,13 +141,35 @@ export const JOB_EXPERIENCE = [
     },
     {
         name: 'DECA',
-        image: rbcLogo,
-        color: '#779ecb',
+        image: decaLogo,
+        color: '#f5a856',
         secondaryDescription: 'Competitor, International Conferience Qualifier',
         descriptions: [
             {
-                projectDescription: 'something',
-                tools: []
+                projectDescription: 'something about business and presentations',
+                tools: [
+                    {
+                        name: 'public speaking yo',
+                        icon: faReact
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        name: 'Youth Nation Alliance',
+        image: ynaLogo,
+        color: '#8b76bc',
+        secondaryDescription: 'Director of Programming',
+        descriptions: [
+            {
+                projectDescription: 'something about volunterring',
+                tools: [
+                    {
+                        name: 'public speaking yo',
+                        icon: faReact
+                    },
+                ]
             },
         ]
     }

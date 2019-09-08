@@ -11,7 +11,7 @@ const Media = styled.div`
 const Logo = styled.img`
 margin-left: 50%;
 transform: translateX(-50%);
-height: 150px;
+height: ${props => props.height};
 width: relative;
 `
 
@@ -19,7 +19,7 @@ const Tools = styled.div`
 border-radius: 15px;
 padding: 0px 10px 0px 10px;
 margin: 5px 0px 5px 10px;
-background-color: ${props => props.color || "palevioletred"};
+background-color: ${props => props.color};
 `
 
 const Icons = styled(FontAwesomeIcon)`
@@ -53,7 +53,7 @@ export default class InfoCard extends React.Component {
         return (
             <Cards>
                 <Media>
-                    <Logo src={experience.image} alt="..." />
+                    <Logo src={experience.image} alt="..." height={this.props.height}/>
                 </Media>
                 <Card.Body className='text-dark'>
                     <h4 className="card-title">{experience.name}</h4>

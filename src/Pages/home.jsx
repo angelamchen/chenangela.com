@@ -6,8 +6,8 @@ import img from '../Images/cliff.jpg';
 
 const IntroSection = styled(Col)`
     color: white;
-     top: 35%;
-     position: fixed;
+    top: 35%;
+    position: fixed;
 `;
 
 const LearnMoreButton = styled.button`
