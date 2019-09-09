@@ -33,11 +33,15 @@ const Wrapper = styled(Container)`
 `
 
 const BackgroundImg = styled.div`
-  background-size: cover;
+background-image: url(${img});
+overflow:hidden;
+min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  height: -webkit-fill-available;
-  background-image: url(${img});
+  background-size: cover;
 `
 
 class Home extends React.Component {
