@@ -68,8 +68,10 @@ font-size: 15px;
 export default class InfoCard extends React.Component {
   render() {
     const experience = this.props.experience;
+    const page = this.props.page;
+
     let link;
-    if (experience.page === "projects" || experience.name !== "Smart Mirror") {
+    if (page === "projects" && experience.name !== "Smart Mirror") {
       link = (
         <a href={experience.link}>
           <Link icon={faLink} size="lg" />
