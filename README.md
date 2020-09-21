@@ -1,68 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 👩🏻‍💻 Personal Website
 
-## Available Scripts
+Second version of my self-designed personal website https://angelamchen.com/. 
 
-In the project directory, you can run:
+Good source to find out more about my interests, projects, or experience! (Also made this to refamiliarize myself with 
+React 😝)
 
-### `npm start`
+## 💻 Tech Stack
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Created with [React](https://reactjs.org/) and bootstraped using [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)\
+Deployed using [GitHub Pages](https://pages.github.com/)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## 👩‍🎓Challenges and What I learned
 
-### `npm test`
+Designing the website was one of the most frustrating yet rewarding things I've ever done. It was very difficult to decide on fonts, styles and colours that I thought worked well together, and then enforcing the css to match the vision I had in my head was another challenge. However, I am overall very happy with the result and currently planning on version 3 with better styling, smother transitions, and less text heavy paragraphs.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Deploying the site was another issue I encountered. At first I was unfamiliar with the process, thus when I ran the `build` scripts, the way I had my deploy command setup resulted in github pages pushing a static version of my site to master. This overwrote all the work I had done and I had to spend a lot of time finding the best way to deploy the site.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I also had a lot of toruble with `React-Router`. Refreshing pages with specific routes resulted in a `404` page. For example, if we refreshed `angelamchen.com/about`, a `404` will be returned. After some researching, this issue occurs since the server, which renders at the indedx, evalues the URL. If we refresh the page, then the browser is looking for the file `/about`, which does not exist, since the routing is done on the client side which has not been laoded. As a solution I followed the suggestion given here: https://github.com/rafgraph/spa-github-pages. This adds a script to the 404 page returned which redirects the browser to a new url containing a query string and hash fragment indicating the current page. GitHub Pages will ignore the query string and redirect the page to `index/html`, which contains a script and that reads the query and route the page correctly.
