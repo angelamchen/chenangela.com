@@ -1,6 +1,6 @@
 # 👩🏻‍💻 Personal Website
 
-Second version of my self-designed personal website https://angelamchen.com/. 
+Second version of my self-designed personal website https://chenangela.com/. 
 
 Good source to find out more about my interests, projects, or experience! (Also made this to refamiliarize myself with 
 React 😝)
